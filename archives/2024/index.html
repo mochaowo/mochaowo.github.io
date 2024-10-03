@@ -1,164 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="author" content="John Doe">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui/dist/css/mdui.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/186526/hexo-theme-mduilw@master/source/css/main.min.css">
-<script src="https://cdn.jsdelivr.net/npm/mdui/dist/js/mdui.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
-<!--传统手艺不能丢-->
-<script>var bug = 0;</script>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/favicon.ico">
-<title>Hexo</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2024||Hexo|</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/archives/2024/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<meta name="author" content="John Doe,undefined">
+
+
+<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/theme.css">
+
+
+<link rel="stylesheet" href="/css/syntax.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.1.0/styles/arta.min.css">
+
+<!--baidu analytics-->
+
 <meta name="generator" content="Hexo 7.3.0"></head>
-<body class="mdui-theme-primary-blue mdui-theme-accent-green" id="main-body">
-    <header class="mdui-appbar ">
-    <div class="mdui-toolbar mdui-color-theme mdui-appbar-inset">
-        <span mdui-drawer="{target: '#main-drawer', swipe: true}" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white "><i class="mdui-icon material-icons mdui-text-color-white-icon">menu</i></span>
-        <a href="/" class="mdui-typo-title mdui-text-color-white-text">Hexo</a>
-        <div class="mdui-toolbar-spacer"></div>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a class="navbar-brand" href="/.">Hexo</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                
+                <li><a href="/."><i class="icon-home"> Home</i></a></li>
+                
+                <li><a href="/archives/" class="current"><i class="icon-archive"> Archive</i></a></li>
+                
+                <li><a href="/atom.xml"><i class="icon-rss"> RSS</i></a></li>
+                
+                <li><a href="/about/"><i class="icon-about"> About</i></a></li>
+                
+            </ul>
+        </div>
     </div>
-</header>
-    <div class="mdui-drawer mdui-drawer-close"  id="main-drawer" style="padding: 20px">
-    <ul class="mdui-list" mdui-collapse="{accordion: true}">
-        
-        <li class="mdui-list-item mdui-ripple">
-            <div class="mdui-list-item-avatar"><img src="https://cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/avatar.jpeg"/></div>
-            <div class="mdui-list-item-content">John Doe</div>
-        </li>
-        
-        <li class="mdui-list-item mdui-ripple" href="/" >
-            <a href="/" class="mdui-list-item-icon mdui-icon material-icons">home</a>
-            <a href="/" class="mdui-list-item-content">Home</a>
-        </li>
-        
-        <li class="mdui-list-item mdui-ripple" href="javascript:void(0);" onclick="darkmod_use()">
-            <a class="mdui-list-item-icon mdui-icon material-icons">brightness_4</a>
-            <a class="mdui-list-item-content">Darkmod</a>
-        </li>
-        
-        
-        <li class="mdui-list-item mdui-ripple" href="/archives/">
-            <a class="mdui-list-item-icon mdui-icon material-icons" href="/archives/">inbox</a>
-            <a class="mdui-list-item-content" href="/archives/">Archive</a>
-        </li>
-        
-        
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <a class="mdui-list-item-icon mdui-icon material-icons">account_circle</a>
-                    <div class="mdui-list-item-content">Others</div>
-                    <div class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</div>
-                </div>
-                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                    
-                        <a class="mdui-list-item mdui-ripple" target="_blank" rel="noopener" href="https://github.com/yourname">Github</a>
-                    
-                </ul>
-            </li>
-        
-        
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <a class="mdui-list-item-icon mdui-icon material-icons">bookmark</a>
-                    <div class="mdui-list-item-content">Pages</div>
-                    <div class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</div>
-                </div>
-                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                    
-                        <a class="mdui-list-item mdui-ripple" href="guestbook/">Guestbook</a>
-                    
-                        <a class="mdui-list-item mdui-ripple" href="about/">About</a>
-                    
-                </ul>
-            </li>
-        
-        
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <a class="mdui-list-item-icon mdui-icon material-icons">people</a>
-                    <div class="mdui-list-item-content">Friends</div>
-                    <div class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</div>
-                </div>
-                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense mdui-ripple">
-                    
-                    <div class="mdui-list-item">
-                    <div class="mdui-list-item-avatar mdui-float-left" style=""><img src="https://cdn.jsdelivr.net/gh/186526/hexo-theme-lx/source/images/avatar.jpg"/></div>
-                    <div class="mdui-list-item-content" href="https://186526.xyz">186526</div>
+</nav>
+<div class="wrapper">
+    <div class="content">
+        <div class="container container-center">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="well">
+    <div class="page-content wc-container">
+        <h1>Archive</h1>
+
+        <div class="post">
+            
+                
+                <div class="post-meta">
+                    <div class="post-time">
+                        <time>2024</time>
                     </div>
+                </div>
+                <ul>
+                    
+                        <li>10-03<a href="/2024/10/03/test/" >test</a></li>
+                    
+                        <li>10-03<a href="/2024/10/03/hello-world/" >Hello World</a></li>
                     
                 </ul>
-            </li>
-        
-    </ul>
+            
+        </div>
+    </div>
 </div>
-    <div class="mdui-container" id="pjax-main">
-        <div id="card_of_archive">
-    
-        <div class="mdui-card mdui-hoverable" style="margin-top: 3%;">
-            <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/avatar.jpeg"/>
-                <div class="mdui-card-header-title">John Doe</div>
-                <div class="mdui-card-header-subtitle">Hexo-Theme-MDUI</div>
-            </div>
-            <div class="mdui-card-media">
-                <img src=""/>
-                <div class="mdui-card-media-covered">
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">test</div>
-                        <div class="mdui-card-primary-subtitle">2024-10-03</div>
-                    </div>
+
                 </div>
-            </div>
-            <div class="mdui-card-actions">
-                <a class="mdui-btn mdui-ripple mdui-float-right" href="/2024/10/03/test/">Read<i class="mdui-icon material-icons">navigate_next</i></a>
+                <div class="col-md-4 hidden-xs">
+                    
+<div class="sidebar">
+    <div class="well">
+        <h2>Tag Cloud</h2>
+        
+    </div>
+</div>
+
+<div class="sidebar">
+    <div class="well">
+        <h2>Archive</h2>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">2024年10月</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+</div>
+
+<div class="sidebar ">
+    <div class="well">
+        <h2>Recent</h2>
+        <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2024/10/03/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/10/03/hello-world/">Hello World</a></li></ul>
+    </div>
+</div>
+
+<div class="sidebar">
+    <div class="well">
+        <h2>Blogroll</h2>
+        <ul>
+            
+            <li><a class="links-list-link" href="http://www.howardliu.com/" title="沉潜飞动" target='_blank'>沉潜飞动</a></li>
+            
+        </ul>
+    </div>
+</div>
+
+                </div>
             </div>
         </div>
-    
-        <div class="mdui-card mdui-hoverable" style="margin-top: 3%;">
-            <div class="mdui-card-header">
-                <img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/avatar.jpeg"/>
-                <div class="mdui-card-header-title">John Doe</div>
-                <div class="mdui-card-header-subtitle">Hexo-Theme-MDUI</div>
-            </div>
-            <div class="mdui-card-media">
-                <img src=""/>
-                <div class="mdui-card-media-covered">
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">Hello World</div>
-                        <div class="mdui-card-primary-subtitle">2024-10-03</div>
-                    </div>
-                </div>
-            </div>
-            <div class="mdui-card-actions">
-                <a class="mdui-btn mdui-ripple mdui-float-right" href="/2024/10/03/hello-world/">Read<i class="mdui-icon material-icons">navigate_next</i></a>
-            </div>
-        </div>
-    
-</div>
-
-        <!--传统手艺不能丢-->
-<script>var bug = 0;</script>
-<div style="text-align: center;margin-top: 10%;">
-
-</div>
-        
-<a class="mdui-fab mdui-ripple mdui-color-green mdui-fab-fixed" href="/"><i href="/" class="material-icons mdui-icon mdui-text-color-black-icon">home</i></a>
-
     </div>
+    <div class="side-button-wrap">
+        <a id="to-top" class="side-button icon-up-arrow" href="#top"></a>
+        <a id="to-home" class="side-button icon-home" href="/."></a>
+        <a id="to-comment-button" class="side-button icon-msg" href="#comment"></a>
+        <a id="to-bottom-button" class="side-button icon-down-arrow" href="#bottom"></a>
+    </div>
+    <a id="bottom" name="bottom"></a>
+    <footer id="footer" class="footer-distributed" style="background-color: #222222;">
+    <div class="container">
+        <div class="footer">
+            <p>John Doe &copy; 2024</p>
+            <ul class="social-media">
+                
+                
+                <li>
+                    <a title="hexo-theme-clean-dark" href="https://github.com/howardliu-cn/hexo-theme-clean-dark"
+                       target="_blank">
+                        <i class="fa fa-film fa-2x"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/header.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+<!--[if lt IE 9]>
+
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+![endif]-->
+<!--fancybox-->
+
+<script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+<script>
+    $(document).ready(function () {
+        $("img").each(function (index, item) {
+            var p = $(item).parents()[0];
+            if($(p).is('a')) {
+                $(p).fancybox();
+                return;
+            }
+            $(p).append(function() {return "<a id='fancybox_id_"+index+"' href='" + $(item).attr("src") + "'></a>";});
+            item.remove();
+            var fancyboxItem = $("#fancybox_id_" + index);
+            fancyboxItem.append($(item));
+            fancyboxItem.fancybox();
+        });
+    });
+</script>
+
+<!--baidu auto-push-->
+
+<!--google analytics-->
+
+<script color="255,255,255" opacity='0.9' zIndex="-1" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 </body>
-
-    <script>
-        $(document).pjax('a', '#pjax-main' , {fragment:'#pjax-main', timeout:8000});
-        
-        </script>
-        
-<script src="https://cdn.jsdelivr.net/gh/186526/hexo-theme-mduilw@master/source/js/main.min.js"></script>
-<script>function girlfriends() {console.log("你在想peach");document.write("<div>你在想peach</div>");return false};</script>
 </html>

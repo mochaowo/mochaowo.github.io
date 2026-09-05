@@ -1,0 +1,18 @@
+# Redefine 主題設定
+# 完整設定文件：https://redefine-docs.ohevan.com/
+
+# 基本資訊
+info:
+  title: mochaowo
+  subtitle: 歡迎來到我的部落格
+  author: mochaowo
+  url: https://mochaowo.github.io
+
+# 首頁橫幅
+home_banner:
+  enable: true
+  title: mochaowo
+
+# 社交連結（想顯示 GitHub 就把 github: 填上網址）
+# social:
+#   github: https://github.com/mochaowo
